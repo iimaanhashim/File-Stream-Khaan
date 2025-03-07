@@ -20,7 +20,7 @@ if 'DYNO' in environ:
     ON_HEROKU = True
 else:
     ON_HEROKU = False
-URL = environ.get("URL", "https://stuck-swordfish-khaan-6ca517bd.koyeb.app/")
+URL = environ.get("URL", "https://yummy-mommy-khaan-a867b78b.koyeb.app/")
 
 # Admins, Channels & Users
 LOG_CHANNEL = int(environ.get('LOG_CHANNEL', '-1002308375163'))
@@ -32,5 +32,5 @@ DATABASE_NAME = environ.get('DATABASE_NAME', "khaanbarwaani")
 
 # Shortlink Info
 SHORTLINK = bool(environ.get('SHORTLINK', False)) # Set True Or False
-SHORTLINK_URL = environ.get('SHORTLINK_URL', 'api.shareus.io')
-SHORTLINK_API = environ.get('SHORTLINK_API', 'hRPS5vvZc0OGOEUQJMJzPiojoVK2')
+SHORTLINK_URL = environ.get('SHORTLINK_URL', '')
+SHORTLINK_API = environ.get('SHORTLINK_API', '')
