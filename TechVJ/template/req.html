@@ -16,7 +16,7 @@
     <link rel="stylesheet" type='text/css' href="https://drive----google.com/uc?export=view&id=1pVLG4gZy7jdow3sO-wFS06aP_A9QX0O6">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Delius">
-    <link rel="stylesheet" href="https://cdn.plyr.io/3.6.9/plyr.css" />
+    
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
@@ -145,13 +145,28 @@
             </div>
         </div>
         <!-- Online Video Player -> to be displayed here  -->
-        <div class="justify-content-center align-items-center w-100 d-flex  flex-wrap">
-            <div class="lg:w-9/12 lg:px-12 lg:py-4 w-full  border border-danger wow animate__animated animate__fadeInLeft">
-                <video id="player" class="player " playsinline controls>
-                    <source src="{{file_url}}" type="video/mp4">
-                </video>
-            </div>
-        </div>
+        
+<!-- JW Player video daawade -->
+<div class="justify-content-center align-items-center w-100 d-flex flex-wrap">
+    <div class="lg:w-9/12 lg:px-12 lg:py-4 w-full border border-danger wow animate__animated animate__fadeInLeft">
+        <div id="my-jwplayer">Fadlan sug...</div>
+    </div>
+</div>
+
+<!-- JW Player script-ka -->
+<script src="https://cdn.jwplayer.com/libraries/IDzF9Zmk.js"></script>
+<script>
+    jwplayer("my-jwplayer").setup({
+        file: "{{file_url}}",
+        title: "{{file_name}}",
+        image: "https://i.ibb.co/q3rVdnKd/image-1.jpg",
+        width: "100%",
+        aspectratio: "16:9",
+        autostart: true,
+        controls: true
+    });
+</script>
+
 
         <!-- External video player section -->
             <div class="justify-content-center align-items-center w-100 d-flex">
@@ -315,7 +330,7 @@
 
     </script>
     
-    <script src="https://cdn.plyr.io/3.6.9/plyr.js"></script>
+    <script src="https://cdn.plyr.io/3.6.12/plyr.js"></script>
 	<script>
         const controls = [
             'play-large',
